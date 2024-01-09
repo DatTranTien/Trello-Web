@@ -1,10 +1,13 @@
-import './App.css'
-import Icon from '@mui/material/Icon'
+import Button from '@mui/material/Button'
+
 
 function App() {
   return (
     <>
-      <Icon>star</Icon>;
+      <h3>DatTranTien</h3>
+      <Button variant="text">Text</Button>
+      <Button variant="contained">Contained</Button>
+      <Button variant="outlined">Outlined</Button>
     </>
   )
 }
