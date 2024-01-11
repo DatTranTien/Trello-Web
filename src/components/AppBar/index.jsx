@@ -1,4 +1,4 @@
-import { HelpOutline, NotificationsOutlined } from '@mui/icons-material'
+import { HelpOutline, LibraryAdd, NotificationsOutlined } from '@mui/icons-material'
 import AppsIcon from '@mui/icons-material/Apps'
 import { Badge, Box, Button, TextField, Tooltip, Typography } from '@mui/material'
 import SvgIcon from '@mui/material/SvgIcon'
@@ -43,7 +43,7 @@ const AppBar = () => {
           <Recent/>
           <Started/>
           <Template/>
-          <Button variant="outlined" >Create</Button>
+          <Button variant="outlined" startIcon={<LibraryAdd/>} >Create</Button>
         </Box>
       </Box>
 
