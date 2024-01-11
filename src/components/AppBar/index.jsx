@@ -52,13 +52,13 @@ const AppBar = () => {
         <ModeSelect/>
         <Tooltip title='Notifications'>
           <Box sx={{ color: 'action.active' }}>
-            <Badge color="secondary" variant="dot" sx={{ cursor:'pointer' }}>
-              <NotificationsOutlined />
+            <Badge color="error" variant="dot" sx={{ cursor:'pointer' }}>
+              <NotificationsOutlined sx={{ color:'primary.main' }} />
             </Badge>
           </Box>
         </Tooltip>
         <Tooltip title='Help'>
-          <HelpOutline sx={{ cursor:'pointer' }}/>
+          <HelpOutline sx={{ cursor:'pointer', color:'primary.main' }}/>
         </Tooltip>
         <Profile/>
       </Box>

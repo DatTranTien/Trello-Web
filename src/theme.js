@@ -17,8 +17,44 @@ const theme = extendTheme({
     dark: {
       palette: {
         primary: {
-          main: '#000'
+          main: '#0f9432'
         }
+      }
+    }
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform:'none'
+        }
+      }
+    },
+    MuiInputLabel: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          color: theme.palette.primary.main,
+          fontSize:'0.875rem'
+        })
+      }
+    },
+    MuiOutlinedInput:{
+      styleOverrides:{
+        root:({ theme }) => ({
+          color: theme.palette.primary.main,
+          fontSize: '0.875rem',
+          '& .MuiOutlinedInput-notchedOutline': {
+            borderColor: theme.palette.primary.light
+          },
+          '&:hover':{
+            '.MuiOutlinedInput-notchedOutline':{
+              borderColor: theme.palette.primary.main
+            }
+          },
+          '& fieldset':{
+            borderWidth: '1px !important'
+          }
+        })
       }
     }
   }
