@@ -1,8 +1,5 @@
-import { Box, FormControl, InputLabel, MenuItem, Select, useColorScheme } from '@mui/material'
-import React from 'react'
-import LightModeIcon from '@mui/icons-material/LightMode'
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined'
-import LightModeTwoToneIcon from '@mui/icons-material/LightModeTwoTone'
+import { Box, FormControl, InputLabel, MenuItem, Select, useColorScheme } from '@mui/material'
 function ModeSelect() {
   const { mode, setMode } = useColorScheme()
 
@@ -11,7 +8,7 @@ function ModeSelect() {
   }
 
   return (
-    <FormControl sx={{ m:1, minWidth:20 }} size='small'>
+    <FormControl sx={{ m:1, minWidth:120 }} size='small'>
       <InputLabel id="label-select-dark-light-mode">Mode</InputLabel>
       <Select
         labelId="label-select-dark-light-mode"
