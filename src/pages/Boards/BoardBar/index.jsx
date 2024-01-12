@@ -5,16 +5,13 @@ import { AddToDrive, Bolt, FilterList, PersonAdd, VpnLock } from '@mui/icons-mat
 
 
 const MENU_STYLES = {
-  color: 'primary.main',
-  bgcolor:'white',
+  color: 'white',
+  bgcolor:'trasnsparent',
   border:'none',
   paddingX: '5px',
   borderRadius:'10px',
   '& .MuiSvgIcon-root': {
-    color:'primary.main'
-  },
-  '& :hover':{
-    bgcolor: 'primary.50'
+    color:'white'
   }
 }
 
@@ -26,7 +23,8 @@ const BOX_STYLES ={
   paddingX: 2,
   gap:2,
   overflowX:'auto',
-  borderTop: '1px solid #oobfa5'
+  borderBottom: '1px solid #oobfa5',
+  backgroundColor: (theme) => (theme.palette.mode === 'dark' ? '#34495e' : '#1976d2')
 }
 const BoardBar = () => {
   return (
@@ -80,14 +78,24 @@ const BoardBar = () => {
         </Box>
       </Box>
 
-      <Box sx={{ display:'flex', alignItems:'center', gap:2 }}>
-        <Button variant="outlined" startIcon={<PersonAdd/>} >Invite</Button>
-        <AvatarGroup max={4}
+      <Box sx={{ display:'flex', alignItems:'center', gap:2
+      }}>
+        <Button
+          sx={{
+            color:'white',
+            borderColor:'white',
+            '&:hover':{
+              borderColor:'white'
+            }
+          }}
+          variant="outlined" startIcon={<PersonAdd/>} >Invite</Button>
+        <AvatarGroup max={7}
           sx={{
             '& .MuiAvatar-root':{
               width:34,
               height:34,
-              fontSize:16
+              fontSize:16,
+              gap:2
             }
           }}
         >
